@@ -16,9 +16,9 @@ $g_smtp_username		  = getenv('SMTP_USER');
 $g_smtp_password		  = getenv('SMTP_PASS');
 $g_smtp_connection_mode   = getenv('SMTP_MODE') ?: 'tls';
 $g_smtp_port              = getenv('SMTP_PORT') ?: 587;
-$g_log_level = LOG_EMAIL | LOG_EMAIL_REIPIENT | LOG_FILTERING | LOG_AJAX | LOG_LDAP;
+$g_log_level = LOG_EMAIL | LOG_EMAIL_REIPIENT | LOG_FILTERING | LOG_AJAX;
 #$g_log_level = LOG_LDAP;
-$g_login_method 	  	= getenv("LOGIN_METHOD") ?: MD5;
+/*$g_login_method 	  	= getenv("LOGIN_METHOD") ?: MD5;
 $g_ldap_server			= getenv("LDAP_SERVER");
 $g_ldap_root_dn			= getenv("LDAP_ROOT_DN");
 $g_ldap_organization 		= getenv("LDAP_ORG") ?: "";
@@ -31,4 +31,9 @@ $g_ldap_uid_field		= getenv("LDAP_UID_FIELD") ?: "sAMAccountName";
 $g_lda_realname_field		= getenv("LDAP_REALNAME_FIELD") ?: "cn";
 $g_use_ldap_realname		= getenv("LDAP_USE_REALNAME") ?: "OFF";
 $g_use_ldap_email		= getenv("LDAP_USE_EMAIL") ?: "ON";
-#$g_ldap_simulation_file_path	= "file:/var/www/html";
+#$g_ldap_simulation_file_path	= "file:/var/www/html";*/
+
+$g_max_failed_login_count = "OFF";
+$g_path = getenv('WEB_HOST') ?: "https://tickets.wccomps.org/";
+
+$g_cookie_time_length = "3600";
