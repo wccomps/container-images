@@ -1,6 +1,6 @@
 FROM ghcr.io/roadrunner-server/roadrunner:2025 AS roadrunner
 FROM alpine:latest
-ENV PHP_VERSION=php82
+ENV PHP_VERSION=php85
 RUN apk update && \
     apk add --no-cache \
     msmtp \
