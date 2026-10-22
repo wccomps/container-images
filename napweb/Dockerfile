@@ -1,6 +1,6 @@
 
 FROM alpine:latest
-ENV PHP_VERSION=php82
+ENV PHP_VERSION=php85
 COPY setupphp.sh /setupphp.sh
 RUN apk update && \
     apk add --no-interactive --no-cache \
@@ -29,8 +29,7 @@ RUN apk update && \
     pdo_pgsql \
     pdo_sqlite \
     gettext \
-    mbstring \    
-    imap \
+    mbstring \
     && rm -rf /var/cache/apk/* \
     && sed -i '/APKINDEX/d;/^rm$/d' /etc/apk/world \
     && rm /setupphp.sh
