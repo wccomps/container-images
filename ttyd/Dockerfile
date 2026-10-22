@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:latest
 RUN apk add tini su-exec openssh-client
 COPY ssh_known_hosts /etc/ssh/
 COPY --from=tsl0922/ttyd:alpine /usr/bin/ttyd /usr/bin/ttyd
